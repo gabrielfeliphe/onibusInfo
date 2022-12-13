@@ -45,7 +45,8 @@ function getTime() {
       const d = new Date();
       let h = addZero(d.getHours());
       let m = addZero(d.getMinutes());
-      let time = h + ":" + m
+      let s = addZero(d.getSeconds());
+      let time = h + ":" + m + ':'+ s
       return time
 }
 
@@ -57,8 +58,8 @@ function addZero(i) {
 
 async function start(){
     while(true){
-        console.log(getTime())
-        if(getTime() === '17:42' && functionRunCheck == false){    
+        console.log(getTime());
+        if(getTime() === process.env.START_HOUR && functionRunCheck == false){    
             await requireAPI();
         }  
         process.stdout.write('\033c');
@@ -66,5 +67,5 @@ async function start(){
     } 
 }
 
-start()
+start();
 
