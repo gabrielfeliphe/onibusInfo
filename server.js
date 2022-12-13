@@ -55,14 +55,5 @@ function addZero(i) {
     return i;
 }
 
-
-async function start(){
-    while(true){
-        if(getTime() === process.env.START_HOUR && functionRunCheck == false){    
-            await requireAPI();
-        }  
-    } 
-}
-
-start();
+requireAPI();
 
