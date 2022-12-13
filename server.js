@@ -58,12 +58,9 @@ function addZero(i) {
 
 async function start(){
     while(true){
-        console.log(getTime());
         if(getTime() === process.env.START_HOUR && functionRunCheck == false){    
             await requireAPI();
         }  
-        process.stdout.write('\033c');
-        console.log("nao entrou no if")
     } 
 }
 
