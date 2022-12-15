@@ -54,7 +54,7 @@ async function requireAPI() {
 
 function filterReadyStop1ShapeId(arr) {
     return arr.some(function(item) {
-      return item.trip_status === "READY" && item.stop_order === 1 && item.shape_id.endsWith("0");
+      return (item.trip_status === "READY" || item.trip_status === "LIVE") && (item.stop_order === 1 || item.stop_order === 2) && item.shape_id.endsWith("0");
     });
   }
 
