@@ -5,7 +5,7 @@ Este é um aplicativo que faz várias requisições para uma API de rastreamento
 
 Este aplicativo é hospedado no Cyclic e foi desenvolvido em Node.js.
 
-#Pré-requisitos
+# Pré-requisitos
 Para executar este aplicativo, você precisará:
 
 Node.js e npm instalados em sua máquina
@@ -16,7 +16,7 @@ Para instalar este aplicativo, siga os seguintes passos:
 Clone este repositório para sua máquina
 Instale as dependências: npm install
 
-#Configuração
+# Configuração
 Antes de executar o aplicativo, você precisará configurar algumas coisas:
 
 Crie uma conta no TakeoutClient e gere um token de acesso.
@@ -25,7 +25,7 @@ Substitua a string TAKEOUT_TOKEN no arquivo .env pelo seu token de acesso do Tak
 Substitua a string URL no arquivo .env pela URL da API de rastreamento de ônibus.
 Substitua a string HEADER no arquivo .env pelo cabeçalho de referência que você deseja enviar com as requisições para a API de rastreamento de ônibus.
 
-#Execução Local
+# Execução Local
 
 Para executar o aplicativo, basta seguir os seguintes passos:
 
@@ -33,6 +33,6 @@ Inicie o aplicativo: npm start
 Acesse http://localhost:3000 no seu navegador para ver o resultado da requisição para a API de rastreamento de ônibus.
 Observação: este aplicativo faz uma nova requisição para a API de rastreamento de ônibus a cada 3 segundos. Se o ônibus estiver pronto para sair do terminal, um e-mail será enviado para o endereço de e-mail especificado usando o TakeoutClient.
 
-#Execução no Cyclic
+# Execução no Cyclic
 
 Faça o setup da aplicação no Cyclic.sh, depois faça a execução dele via schedule
