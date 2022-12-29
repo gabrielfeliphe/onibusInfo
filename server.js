@@ -3,15 +3,17 @@ var axios = require('axios');
 var ApiSendEmail = require('./sendemail-api.js')
 var geolib = require('geolib');
 
-const express = require('express')
-const app = express()
+exports.handler = async (event,callback) => {
 
-app.get('/',async function(request, response){
-    returnoFunc = await requireAPI()
-    response.status(200).json(returnoFunc);
-})
-
-app.listen(3000)
+    const retorno = await requireAPI();
+    
+    const response = {
+        statusCode: 200,
+        body: JSON.stringify(retorno)
+    };
+  
+    return response;
+}
 
 const interval = 3000;
 
@@ -34,7 +36,6 @@ async function requireAPI() {
             .then(response => {
                 busReq = response.data
                 var items = filterReadyStop1ShapeId(busReq);
-
                 var latitude, longitude;
 
                 for ({ latitude, longitude } of items) {} // 
