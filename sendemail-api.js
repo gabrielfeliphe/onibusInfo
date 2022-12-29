@@ -6,9 +6,9 @@ sendEmail = async function () {
 
 const emailTemplate = {
     to: process.env.EMAIL,
-    from: 'ONIBUS SAIU DO TERMINAL', // This will be (e.g) 'Takeout.js via Takeout' for free users
-    subject: `O Ônibus acabou de sair do terminal`,
-    html: `<b>O Ônibus acabou de sair do terminal</b>`,
+    from: 'ONIBUS ESTÁ PROXIMO AO PONTO', // This will be (e.g) 'Takeout.js via Takeout' for free users
+    subject: `O ONIBUS ESTÁ PROXIMO AO PONTO`,
+    html: `<b>O ONIBUS ESTÁ PROXIMO AO PONTO</b>`,
 }
 
    sendingStatus =  await client.send(emailTemplate)
